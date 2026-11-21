@@ -15,7 +15,7 @@ pipeline {
     }
     
     stages {
-        stage('Check for CI Skip') {
+        /*stage('Check for CI Skip') {
             steps {
                 script {
                     def commitMessage = sh(script: 'git log -1 --pretty=%B', returnStdout: true).trim()
@@ -28,6 +28,7 @@ pipeline {
                 }
             }
         }
+        */
         
         stage('Cleanup Workspace') {
             steps {
@@ -40,7 +41,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 script {
-                    checkoutRepo(env.GIT_REPO,env.GIT_BRANCH)
+                    checkoutRepo()
                 }
             }
         }
