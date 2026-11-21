@@ -5,8 +5,8 @@ pipeline {
     
     environment {
         // Update the main app image name to match the deployment file
-        DOCKER_IMAGE_NAME = 'sourya/easyshop-app'
-        DOCKER_MIGRATION_IMAGE_NAME = 'sourya/easyshop-migration'
+        DOCKER_IMAGE_NAME = 'sourya01/easyshop-app'
+        DOCKER_MIGRATION_IMAGE_NAME = 'sourya01/easyshop-migration'
         DOCKER_IMAGE_TAG = "${BUILD_NUMBER}"
         AWS_CREDENTIALS = credentials('aws-credentials')
         GITHUB_CREDENTIALS = credentials('github-credentials')
